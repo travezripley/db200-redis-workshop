@@ -1,11 +1,15 @@
 # Redis Workshop
-# Special offers inside,  
+
+# Special offers inside,
+
+## Some Assembly Required
 
 # Author - Michel Roberts JR.
 
-# Modified by Travis Ripley, * Started Monday April 29th, 2019 17:30
+# Modified by Travis Ripley, \* Started Monday April 29th, 2019 17:30
 
 ## Right after this commercial break:
+
 ## Prerequisites
 
 Redis is it's own separate program that must run in the background.
@@ -29,7 +33,7 @@ We'll be using a program called Medis to connect to our Redis instance.
 - Run `brew install redis`
 - Download, unzip, and add the Medis app to your Applications folder: [medis-latest.zip](https://s3-us-west-1.amazonaws.com/oca-start-now/Medis/osx/medis-latest.zip)
 - Use the `redis-server` command in a terminal to start Redis
-    - Note that this creates a Redis database file in the directory you're in
+  - Note that this creates a Redis database file in the directory you're in
 - Open Medis, click connect
 - Select the Terminal tab in top right
 - Type `INFO` and hit return
@@ -40,7 +44,7 @@ We'll be using a program called Medis to connect to our Redis instance.
 We're going to be sending commands directly to Redis through the terminal in Medis.
 Normally a server would be connected and sending commands, but because the commands are so similar we'll be using the terminal instead.
 
-Once you have completed all the commands *leave Redis running* so that the tests can confirm you have run the correct commands.
+Once you have completed all the commands _leave Redis running_ so that the tests can confirm you have run the correct commands.
 
 ### `GET` & `SET`
 
@@ -80,7 +84,6 @@ key and associated value, Set-if-not-exists (called `SETNX` on Redis) that sets 
 key only if it does not already exist, and `INCR` to atomically increment a
 number stored at a given key:
 
-
 ### Try this
 
 ```
@@ -93,6 +96,7 @@ number stored at a given key:
 ```
     INCR connections => 12
 ```
+
 `connections` should now return 12.
 
 ```
@@ -125,7 +129,6 @@ The problem is that doing the increment in this way will only work as long as th
 4. Client B increments 10 and sets count to 11.
 
 We wanted the value to be 12, but instead it is 11! This is because incrementing the value in this way is not an atomic operation. Calling the `INCR` command in Redis will prevent this from happening, because it is an atomic operation. Redis provides many of these atomic operations on different types of data.
-
 
 ### Expiring Keys
 
@@ -251,14 +254,14 @@ The next data structure that we'll look at is a set. A set is similar to a list,
 
 ## Exit Criteria
 
-- Complete all the exercises that say *Try this*
+- Complete all the exercises that say _Try this_
 - All tests pass
 
-
-There is no need to publish this to now.sh and you can provide the github url only for this project submission. [Submit your project](https://goo.gl/forms/wx8DLSus7s88lk043) 
+There is no need to publish this to now.sh and you can provide the github url only for this project submission. [Submit your project](https://goo.gl/forms/wx8DLSus7s88lk043)
 
 ##
+
 #Thank you for taking the time to look at my projects,
 
-#Also please follow my progress on youtube: 
+#Also please follow my progress on youtube:
 https://www.youtube.com/channel/UCXv4p-lDYeWXPlnoRFYCSUg
